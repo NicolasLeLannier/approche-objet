@@ -29,6 +29,16 @@ public class TestPersonne {
 		System.out.println(p3.prenom);
 		System.out.println(p1.prenom);
 		System.out.println(p3.nom + "  " +p3.prenom + " :  " + p3.adresse.ville);
+		
+		AdressePostale adr3 = new AdressePostale(10000, "Rue de la paix", 61, "Bordeaux");
+		
+		p2.Afficher();
+		p1.setPrenom("Maria");
+		p1.Afficher();
+		System.out.println(p1.adresse.ville);
+		p1.setAdresse(adr3);
+		System.out.println(p1.adresse.ville);
+		System.out.println(p1.getAdresse().libelleRue);
 	}
 
 }
