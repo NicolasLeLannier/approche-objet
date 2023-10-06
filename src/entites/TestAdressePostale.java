@@ -19,6 +19,14 @@ public class TestAdressePostale {
 //		adr2.ville = "Orléans";
 		
 		System.out.println(adr1.ville);
+		
+		System.out.println(adr2.nbDepartement);
+		
+		AdressePostale.nbDepartement = 102;
+		
+		System.out.println(adr2.nbDepartement);
+		System.out.println(AdressePostale.nbDepartement);
+		System.out.println(AdressePostale.NB_REGIONS);
 	}
 
 }

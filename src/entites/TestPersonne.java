@@ -40,7 +40,8 @@ public class TestPersonne {
 		System.out.println(p3.adresse.ville);
 		p3.setAdresse(adr3);
 		System.out.println(p3.adresse.ville);
-		System.out.println(p3.getAdresse().libelleRue);
+		System.out.println(p3.getAdresse());
+		System.out.println(p3.toString());
 	}
 
 }
