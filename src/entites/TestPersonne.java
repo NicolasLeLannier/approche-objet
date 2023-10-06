@@ -32,13 +32,15 @@ public class TestPersonne {
 		
 		AdressePostale adr3 = new AdressePostale(10000, "Rue de la paix", 61, "Bordeaux");
 		
-		p2.Afficher();
-		p1.setPrenom("Maria");
-		p1.Afficher();
-		System.out.println(p1.adresse.ville);
-		p1.setAdresse(adr3);
-		System.out.println(p1.adresse.ville);
-		System.out.println(p1.getAdresse().libelleRue);
+		System.out.println("\n-----------------------------------------\n");
+		
+		p4.Afficher();
+		p3.setPrenom("Maria");
+		p3.Afficher();
+		System.out.println(p3.adresse.ville);
+		p3.setAdresse(adr3);
+		System.out.println(p3.adresse.ville);
+		System.out.println(p3.getAdresse().libelleRue);
 	}
 
 }
