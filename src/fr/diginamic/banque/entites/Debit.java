@@ -8,11 +8,6 @@ public class Debit extends Operation {
 	}
 
 	@Override
-	public String toString() {
-		return "Debit [dateOperation=" + dateOperation + ", montant=" + montant + "]";
-	}
-
-	@Override
 	public String getType() {
 		// TODO Auto-generated method stub
 		return "DEBIT";

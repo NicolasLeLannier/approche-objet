@@ -16,7 +16,7 @@ public abstract class Operation {
 
 	@Override
 	public String toString() {
-		return "Operation [dateOperation=" + dateOperation + ", montant=" + montant + "]";
+		return "Operation [type=" + getType() + ", dateOperation=" + dateOperation + ", montant=" + montant + "]";
 	}
 	
 	public abstract String getType();

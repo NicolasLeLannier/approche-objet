@@ -6,11 +6,6 @@ public class Credit extends Operation {
 		super(dateOperation, montant);
 		// TODO Auto-generated constructor stub
 	}
-	
-	@Override
-	public String toString() {
-		return "Credit [dateOperation=" + dateOperation + ", montant=" + montant + "]";
-	}
 
 	@Override
 	public String getType() {
