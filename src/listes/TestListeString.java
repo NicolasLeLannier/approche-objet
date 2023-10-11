@@ -51,6 +51,8 @@ public class TestListeString {
 //			}
 //		}
 		
+		
+		// UTILISER ITERATOR C'EST 100% CONTRAIREMENT AU FOR COMME ICI (QUAND IL Y DES GROSSES DONNEES A TRAITER)
 		for (int i = 0; i < villes.size(); i++) {
 			premierLettre = villes.get(i).charAt(0);
 			if (premierLettre == 'N') {
