@@ -42,4 +42,9 @@ public class Ville {
 	public void setNbHabitant(int nbHabitant) {
 		this.nbHabitant = nbHabitant;
 	}
+
+	@Override
+	public String toString() {
+		return "Ville [nom=" + nom + ", nbHabitant=" + nbHabitant + "]";
+	}
 }
