@@ -20,12 +20,19 @@ public class TestVille {
 		tableauVille.add(new Ville("Pau", 77200));
 		tableauVille.add(new Ville("Marseille", 850700));
 		tableauVille.add(new Ville("Tarbes", 40600));
-		
-		Collections.sort(tableauVille);
-		
+
+		Collections.sort(tableauVille, new ComparatorHabitant());
+
 //		System.out.println(tableauVille);
+
+		for (Ville afficher : tableauVille) {
+			System.out.println(afficher);
+		}
+
+		System.out.println("-------------------");
 		
-		for(Ville afficher : tableauVille) {
+		Collections.sort(tableauVille, new ComparatorNom());
+		for (Ville afficher : tableauVille) {
 			System.out.println(afficher);
 		}
 	}
