@@ -2,6 +2,7 @@ package maps;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class ComptagePaysParContinent {
 
@@ -41,12 +42,9 @@ public class ComptagePaysParContinent {
 		compterNbPays.put("Asie", comptageAsie);
 		compterNbPays.put("Oceanie", comptageOceanie);
 		
-		for(String key : compterNbPays.keySet()) {
-			System.out.println(key);
-		}
-		for(Integer valeur : compterNbPays.values()) {
-			System.out.println(valeur);
-		}
+		for (Map.Entry m : compterNbPays.entrySet()) {
+            System.out.println("Continent : " + m.getKey() + ", Nombre de Pays : " + m.getValue());
+        }
 	}
 
 }
