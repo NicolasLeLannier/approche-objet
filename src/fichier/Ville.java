@@ -3,7 +3,7 @@ package fichier;
 public class Ville {
 
 	protected String nomVille;
-	protected int departement;
+	protected String departement;
 	protected String nomRegion;
 	protected int populationTotal;
 	
@@ -13,7 +13,7 @@ public class Ville {
 	 * @param nomRegion
 	 * @param population
 	 */
-	public Ville(String nomVille, int departement, String nomRegion, int populationTotal) {
+	public Ville(String nomVille, String departement, String nomRegion, int populationTotal) {
 		super();
 		this.nomVille = nomVille;
 		this.departement = departement;
@@ -44,14 +44,14 @@ public class Ville {
 	/**
 	 * @return the departement
 	 */
-	public int getDepartement() {
+	public String getDepartement() {
 		return departement;
 	}
 
 	/**
 	 * @param departement the departement to set
 	 */
-	public void setDepartement(int departement) {
+	public void setDepartement(String departement) {
 		this.departement = departement;
 	}
 
