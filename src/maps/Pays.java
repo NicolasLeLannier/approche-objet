@@ -1,5 +1,7 @@
 package maps;
 
+// Ne compare que pour 1 type (soit int soit String) à la fois
+//public class Pays implements Comparable<Pays> {
 public class Pays {
 
 	protected String nom;
@@ -18,6 +20,28 @@ public class Pays {
 		this.continent = continent;
 	}
 
+	
+//	public int compareTo(Pays autre) {
+//		// Trie sur la population
+//		if(this.nbHab > autre.getNbHab()) {
+//			return 1;
+//		} else if(this.nbHab < autre.getNbHab()) {
+//			return -1;
+//		}
+//		return 0;
+		
+		// Fonctionne uniquement si on utilise des int
+//		return this.nbHab - autre.getNbHab();
+		
+		
+		// Trie sur le nom (String)
+			// Décroissant
+//		return -this.nom.compareTo(autre.getNom());
+			// Croissant
+//		return this.nom.compareTo(autre.getNom());
+//	}
+	
+	
 	@Override
 	public String toString() {
 		return "Pays [nom=" + nom + ", nbHab=" + nbHab + ", continent=" + continent + "]";

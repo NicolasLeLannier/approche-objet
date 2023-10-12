@@ -7,11 +7,7 @@ import java.util.Map;
 public class ComptagePaysParContinent {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-		int comptageEurope = 0;
-		int comptageAsie = 0;
-		int comptageOceanie = 0;
+		// TODO Auto-generated method stub		
 		
 		ArrayList<Pays> listePays = new ArrayList<>();
 		listePays.add(new Pays("France", 65000000, "Europe"));
@@ -22,29 +18,25 @@ public class ComptagePaysParContinent {
 		listePays.add(new Pays("Indonésie", 220000000, "Océanie"));
 		listePays.add(new Pays("Australie", 20000000, "Océanie"));
 		
-		for(Pays contenu : listePays) {
-			System.out.println(contenu);
-		}
 		
+		// Compter les pays par continent : aggrégation
+		// Etape 1 : créer map (clé : continent / valeur : compteur)
 		HashMap<String, Integer> compterNbPays = new HashMap<>();
 		
-		for(Pays contenu : listePays) {
-			if(contenu.continent.equals("Europe")) {
-				comptageEurope ++;
-			} else if(contenu.continent.equals("Asie")) {
-				comptageAsie ++;
-			} else {
-				comptageOceanie ++;
-			}
+		
+		// Etape 2 : comptage
+		for(Pays pays : listePays) {
+			Integer compteur = compterNbPays.getOrDefault(pays.getContinent(), 0);
+			compteur ++;
+			compterNbPays.put(pays.getContinent(), compteur);
 		}
 		
-		compterNbPays.put("Europe", comptageEurope);
-		compterNbPays.put("Asie", comptageAsie);
-		compterNbPays.put("Oceanie", comptageOceanie);
+		System.out.println(compterNbPays);
 		
 		for (Map.Entry m : compterNbPays.entrySet()) {
             System.out.println("Continent : " + m.getKey() + ", Nombre de Pays : " + m.getValue());
         }
+		
 	}
 
 }
