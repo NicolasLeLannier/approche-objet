@@ -17,12 +17,14 @@ public class RecherchePopulationRegion extends MenuService {
 
 		String nomRegion = scanner.nextLine();
 
+		// Parcourir la liste des villes pour attribuer ceux qu'on a besoin dans une List
 		for (Recensement listeVille : listeVilleDeBase) {
 			if (listeVille.getVille().getNomRegion().toUpperCase().equals(nomRegion.toUpperCase())) {
 				popTotal += listeVille.getVille().getPopulationTotale();
 			}
 		}
 
+		// Affichage final avec vérification de la population à 0
 		if(popTotal == 0) {
 			System.out.println("\nNous n'avons pas pu trouver de régions pour : " + nomRegion + "\n");
 		} else {

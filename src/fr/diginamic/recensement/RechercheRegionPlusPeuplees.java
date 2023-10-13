@@ -13,14 +13,18 @@ public class RechercheRegionPlusPeuplees extends MenuService {
 
 	@Override
 	public void traiter(List<Recensement> listeVilleDeBase, Scanner scanner) {
+		// Trie sur les régions
 		Collections.sort(listeVilleDeBase, new ComparatorRegion());
 		
+		// Initialisation des variables
 		int popTotalRegion = 0;
 		int compteur = 1;
 		String nomRegionActuelle = listeVilleDeBase.get(0).getVille().getNomRegion();
 		
+		// Initialisation d'une List
 		List<Region> sortByValue = new ArrayList<>();
 		
+		// Parcourir la liste des villes pour attribuer ceux qu'on a besoin dans une List
 		for (Recensement listeVille : listeVilleDeBase) {
 			if (listeVille.getVille().getNomRegion().equals(nomRegionActuelle)) {
 				popTotalRegion += listeVille.getVille().getPopulationTotale();
@@ -31,8 +35,10 @@ public class RechercheRegionPlusPeuplees extends MenuService {
 			}
 		}
 		
+		// Trie par Valeur
 		Collections.sort(sortByValue);
 		
+		// Affichage des 10 premiers
 		System.out.println("\nLes 10 régions les plus peuplés : ");
 		for(Region r1 : sortByValue) {
 			if(compteur <= 10) {

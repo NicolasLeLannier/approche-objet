@@ -8,6 +8,7 @@ public class ComparatorPopulation implements Comparator<Recensement> {
 		// TODO Auto-generated constructor stub
 	}
 
+	// Trie sur les populations
 	@Override
 	public int compare(Recensement v1, Recensement v2) {
 		if(v1.getVille().getPopulationTotale() > v2.getVille().getPopulationTotale()) {

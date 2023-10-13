@@ -13,14 +13,18 @@ public class RechercheDepartementPlusPeuplees extends MenuService {
 
 	@Override
 	public void traiter(List<Recensement> listeVilleDeBase, Scanner scanner) {
+		// Trie sur les départements
 		Collections.sort(listeVilleDeBase, new ComparatorDepartement());
 
+		// Initialisation des variables
 		int popTotalDepartement = 0;
 		int compteur = 1;
 		String codeDepartementActuelle = listeVilleDeBase.get(0).getVille().getCodeDepartement();
 
+		// Initialisation d'une List
 		List<Departement> sortByValue = new ArrayList<>();
 
+		// Parcourir la liste des villes pour attribuer ceux qu'on a besoin dans une List
 		for (Recensement listeVille : listeVilleDeBase) {
 			if (listeVille.getVille().getCodeDepartement().equals(codeDepartementActuelle)) {
 				popTotalDepartement += listeVille.getVille().getPopulationTotale();
@@ -31,8 +35,10 @@ public class RechercheDepartementPlusPeuplees extends MenuService {
 			}
 		}
 
+		// Trie par Valeur
 		Collections.sort(sortByValue);
 
+		// Affichage des 10 premiers
 		System.out.println("\nLes 10 départements les plus peuplés : ");
 		for (Departement d1 : sortByValue) {
 			if (compteur <= 10) {

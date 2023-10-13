@@ -8,6 +8,7 @@ public class ComparatorDepartement implements Comparator<Recensement> {
 		// TODO Auto-generated constructor stub
 	}
 
+	// Trie sur les départements
 	@Override
 	public int compare(Recensement v1, Recensement v2) {
 		return v1.getVille().getCodeDepartement().compareTo(v2.getVille().getCodeDepartement());

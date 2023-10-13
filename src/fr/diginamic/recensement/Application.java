@@ -18,11 +18,14 @@ public class Application {
 		int enlevePremierLigne = 0;
 		String nombre = "";
 		
+		// Chemin du fichier
 		Path pathFichierDeBase = Paths.get("C:/temp/TP 16 Manipulation de fichier/tp 16 - recensement population 2016.csv");
 		
+		// Initialisations des listes
 		List<String> lectureFichier = Files.readAllLines(pathFichierDeBase);
 		List<Recensement> listeVilleDeBase = new ArrayList<>();
 		
+		// Ajout des données que l'on veux dans la liste listeVilleDeBase d'après la classe Recensement 
 		for(String afficherFichier : lectureFichier) {
 			String[] tokens = afficherFichier.split(";");
 			if(enlevePremierLigne != 0) {
@@ -40,6 +43,7 @@ public class Application {
 		do {
 			Scanner scanner = new Scanner(System.in);
 			
+			// Affichage du menu
 			System.out.println("1. Population d'une ville donnée");
 			System.out.println("2. Population d'un département donné");
 			System.out.println("3. Population d'une région donnée");
@@ -53,6 +57,7 @@ public class Application {
 			nombre = scanner.nextLine();
 			
 			
+			// Switch case pour rediriger le programme vers la bonne méthode avec le default qui vérifie si le nombre saisie est bien dans le menu
 			switch (nombre) {
 			case "1": 
 				RecherchePopulationVille recherchePopulationVille = new RecherchePopulationVille();
