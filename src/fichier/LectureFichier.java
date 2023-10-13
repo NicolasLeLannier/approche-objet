@@ -30,7 +30,7 @@ public class LectureFichier {
 //			tokens[9] => populationTotal
 			if(enlevePremierLigne != 0) {
 				tokens[9] = tokens[9].replaceAll("\\s", "");
-				listeVille.add(new Ville(tokens[6],tokens[0], tokens[1], Integer.parseInt(tokens[9])));
+				listeVille.add(new Ville(tokens[6],tokens[2], tokens[1], Integer.parseInt(tokens[9])));
 			} else {
 				enlevePremierLigne ++;
 			}
