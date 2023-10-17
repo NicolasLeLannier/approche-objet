@@ -1,5 +1,7 @@
 package fr.diginamic.essais;
 
+import org.apache.commons.lang3.math.NumberUtils;
+
 import fr.diginamic.entites.Cercle;
 import fr.diginamic.utils.CercleFactory;
 
@@ -20,6 +22,8 @@ public class TestCercle {
 		
 		Cercle c1 = CercleFactory.crerCercle(5);
 		System.out.println(c1.calculPerimetre());
+		
+		NumberUtils.max(2, 5);
 	}
 
 }
