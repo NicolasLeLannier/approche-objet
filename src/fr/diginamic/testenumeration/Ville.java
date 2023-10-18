@@ -1,4 +1,4 @@
-package listes;
+package fr.diginamic.testenumeration;
 
 import java.util.Objects;
 
@@ -13,15 +13,22 @@ public class Ville {
 	
 	/** nbHabitant */
 	protected int nbHabitant;
+	protected Continent continent;
 
 	/** Constructor
 	 * @param nom
 	 * @param nbHabitant
 	 */
-	public Ville(String nom, int nbHabitant) {
+	public Ville(String nom, int nbHabitant, Continent continent) {
 		super();
 		this.nom = nom;
 		this.nbHabitant = nbHabitant;
+		this.continent = continent;
+	}
+
+	@Override
+	public String toString() {
+		return "Ville [nom=" + nom + ", nbHabitant=" + nbHabitant + ", continent=" + continent + "]";
 	}
 
 	// Si 2 objets sont identiques alors leurs hashcode doit aussi être identique
@@ -85,8 +92,17 @@ public class Ville {
 		this.nbHabitant = nbHabitant;
 	}
 
-	@Override
-	public String toString() {
-		return "Ville [nom=" + nom + ", nbHabitant=" + nbHabitant + "]";
+	/** Getter
+	 * @return the continent
+	 */
+	public Continent getContinent() {
+		return continent;
+	}
+
+	/** Setter
+	 * @param continent the continent to set
+	 */
+	public void setContinent(Continent continent) {
+		this.continent = continent;
 	}
 }
